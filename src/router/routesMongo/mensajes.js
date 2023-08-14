@@ -11,7 +11,7 @@ ChatR.get("/", async (req,res) =>{
     // let ProductosT = await producto.getProducts()
     res.render("chat", {
 
-        tittle: "productos",
+        //tittle: "productos",
          //productos: ProductosT
     })
 })
