@@ -7,17 +7,28 @@ export default class MensajesManagerM {
     }
 
     async #getMaxId() {
+
         let maxId  = 0;
+        const msgs = await this.getAll()
     }
 
-    async getAll(){
+    createMensaje = async(obj) => {
+
+        try { 
+            let result = await cartModel.create(obj)
+            return result
+        }
+
+        catch (err){
+            console.log("no fue posible guardar el mensaje" + err)
+        }
+    }
+
+    getAll = async()=> {
+
         let result = await cartModel.find()
         return result
+
     }
 
-    async createMensaje(mensaje) {
-
-        let result = await cartModel.create(mensaje)
-        return result
-    }
 }

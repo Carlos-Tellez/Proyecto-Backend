@@ -1,19 +1,12 @@
 import { Router } from "express";
-import ProductManager from "../../DAO/DBManagers/FileSystem/productManager.js";
+import MensajesManagerM from "../../DAO/DBManagers/Mongo/mensajes.js"
 
-
-const producto = new ProductManager();
-const ChatR = Router()
-
+const ChatR = Router();
+const MensajesManager = new MensajesManagerM();
 
 
 ChatR.get("/", async (req,res) =>{
-    // let ProductosT = await producto.getProducts()
-    res.render("chat", {
-
-        //tittle: "productos",
-         //productos: ProductosT
-    })
-})
+    res.render("chat")
+});
 
 export default ChatR

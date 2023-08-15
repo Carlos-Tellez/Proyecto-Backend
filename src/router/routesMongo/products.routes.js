@@ -13,14 +13,20 @@ VistaRealTimeR.get("/", async (req, res)=> {
 
     try {
 
-        let products = await producto.getAll()
+        let page = req.query.page;
+        let limit = req.query.limit
+        let category = req.query.category
+        let q = req.query.q
+        let price = req.query.price
+
+        let products = await producto.getAll(page ,limit, category, q, price)
         res.json({result: "succes", payload:  products})
     }
     catch (err) {
             console.log("no es posible conectar")
     }
 
-})
+});
 
 
 VistaRealTimeR.get("/:id", async (req, res)=> {

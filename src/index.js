@@ -1,32 +1,26 @@
 import express from "express";
-import ProductoR from "./router/routesFileSystem/product.routes.js"
-import CartR from "./router/routesFileSystem/cart.routes.js"
-import {engine} from "express-handlebars"
-import * as path from "path"
+import ProductoR from "./router/routesFileSystem/product.routes.js";
+import CartR from "./router/routesFileSystem/cart.routes.js";
+import {engine} from "express-handlebars";
+import * as path from "path";
 import __dirname from "./utils.js";
-import ProductManager from "./DAO/DBManagers/FileSystem/productManager.js";
 import VistaR from "./router/routesFileSystem/vista.routes.js";
-import { Server } from "socket.io"
-import VistaRealTimeR from "./router/routesMongo/realTimeProducts.routes.js";
+import { Server } from "socket.io";
+import VistaRealTimeR from "./router/routesMongo/Products.routes.js";
 import mongoose from "mongoose";
-import VistaCarrito from "../src/router/routesMongo/cart.routes.js"
+import VistaCarrito from "../src/router/routesMongo/cart.routes.js";
 import ChatR from "./router/routesMongo/mensajes.js";
-import * as http from 'http'
-import * as socketio from 'socket.io'
-import  MensajesManagerM from "./DAO/DBManagers/Mongo/mensajes.js"
-//import conectarS from "./DAO/DBManagers/Mongo/mensajes.js"
+import * as http from 'http';
+import  MensajesManagerM from "./DAO/DBManagers/Mongo/mensajes.js";
+import productosVista from "../src/router/routesMongo/productos.routes.js";
+import carritoVista from "./router/routesMongo/carrito.routes.js";
+
 const app = express();
-//const producto = new ProductManager();
-//const http = require('http');
-//const socketio = require('socket.io');
+
 
 const server = http.createServer(app);
-//const conect1 = new conectarS()
-const mensajeM = new MensajesManagerM()
-//conect1.conect(server)
-//require('../src/DAO/DBManagers/Mongo/mensajes.js')(io);
-
-//io.listen(server)
+const mensajeM = new MensajesManagerM();
+const io = new Server(server);
 
 
 
@@ -52,38 +46,42 @@ app.use("/view",VistaR)
 app.use("/viewR",VistaRealTimeR)
 app.use("/carrito", VistaCarrito)
 app.use("/chatR",ChatR )
+app.use("/productosM", productosVista)
+app.use("/carritoM", carritoVista)
 
 
 server.listen(8080, ()=>{
 
-    console.log("servidor arriba en el puerto: 8080" );
-
-    server.on('connection', socket => {
-
-        console.log("Nuevo usuario conectado", socket.id);
-
-        socket.on('disconnect', ()=>{
-            console.log("usuario desconectado", socket.id)
-        })
-
-        socket.on("chat: message", async (msg) => {
-            await mensajeM.createMensaje(msg)
-            server.emit('messages'), await mensajeM.getAll()
-        })
-
-    })
-
+    console.log("servidor Activo en el puerto: 8080" );
 
 });
 
 
-//socketserver
+io.on('connection', (socket) => {
 
-//const socketServer = new Server(httpServer)
-/*
-socketServer.on('connect', () => {
-    console.log("client connected by sockets")
-    /* socket.on('disconnected', ()=> {
-        console.log("Cliente disconnected")
+    console.log("Nuevo usuario conectado", socket.id);
+
+    socket.on('newUser', (user)=> {
+        console.log(`> ${user} ha iniciado sesion`)
     })
-})*/
+
+    socket.on('chat:mensaje' , async (msg) => {
+
+        await mensajeM.createMensaje(msg);
+        io.emit('mensajes', await mensajeM.getAll())
+    })
+
+    socket.on('newUser', (user)=> {
+        socket.broadcast.emit('newUser', user)
+    })
+
+    socket.on('chat:typing', (data)=> {
+
+        socket.broadcast.emit('chat:typing', data)
+    })
+
+    socket.on('disconnect', ()=>{
+        console.log("usuario desconectado", socket.id)
+    })
+
+});
