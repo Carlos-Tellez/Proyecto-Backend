@@ -59,7 +59,7 @@ export default class productManagerM {
 
         try { 
         let result = await ProductModel.create(product)
-            //res.status(201).json({result: "succes", payload: result})
+
             return result
         }
 

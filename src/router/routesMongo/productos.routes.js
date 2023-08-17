@@ -13,6 +13,7 @@ productosVista.get("/", async (req,res) =>{
     res.render("products", {
 
         tittle: "productos",
+        user: req.session.user,
         productos: ProductosT
     })
 })

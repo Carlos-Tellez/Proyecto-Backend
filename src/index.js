@@ -14,6 +14,11 @@ import * as http from 'http';
 import  MensajesManagerM from "./DAO/DBManagers/Mongo/mensajes.js";
 import productosVista from "../src/router/routesMongo/productos.routes.js";
 import carritoVista from "./router/routesMongo/carrito.routes.js";
+import handlebars from "express-handlebars";
+import vistas from "./router/routesMongo/vistas.router.js";
+import session from "express-session"
+import MongoStore from "connect-mongo"
+import sesiones from "./router/routesMongo/sesiones.routes.js";
 
 const app = express();
 
@@ -26,13 +31,24 @@ const io = new Server(server);
 
 mongoose.connect("mongodb+srv://sbejarano:6exZyyAwm4byMnkh@eccomerce.cpjouqp.mongodb.net/?retryWrites=true&w=majority");
 
+app.use(session({
+    store: MongoStore.create({
+        mongoUrl: "mongodb+srv://sbejarano:6exZyyAwm4byMnkh@eccomerce.cpjouqp.mongodb.net/?retryWrites=true&w=majority",
+        ttl: 3600,
+    }),
+    secret: "coder secret",
+    resave: false,
+    saveUninitialized: false,
+}));
+
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 
 //handlebars
-app.engine("handlebars", engine())
+app.engine("handlebars", handlebars.engine())
 app.set("view engine", "handlebars")
-app.set("views", path.resolve(__dirname + "/views"))
+//app.set("views", path.resolve(__dirname + "/views"))
+app.set("views", `${__dirname}/views`)
 
 //static
 app.use("/", express.static(__dirname + "/public"))
@@ -48,6 +64,8 @@ app.use("/carrito", VistaCarrito)
 app.use("/chatR",ChatR )
 app.use("/productosM", productosVista)
 app.use("/carritoM", carritoVista)
+app.use("/", vistas)
+app.use ("/sesiones", sesiones)
 
 
 server.listen(8080, ()=>{

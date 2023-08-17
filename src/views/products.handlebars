@@ -1,4 +1,12 @@
 <div id="container">
+    <form action="" id="Logout">
+        <button type="submit">Logout</button>
+
+    </form>
+
+
+    <h1>Bienvenido, {{user.name}}</h1>
+
     <h1>Lista de productos</h1>
     {{#each productos}}
 
@@ -11,6 +19,7 @@
 <button id="agregar" >Agregar</button>
 {{/each}}
 
+
 </div>
 
-<script src="./eventosP.js"></script>
+<script src="./logout.js"></script>

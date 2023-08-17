@@ -103,7 +103,7 @@ export default class CartManagerM {
 
         try {
 
-            let result = await ProductModel.updateOne({_id: cid, _id: pid}, productUpdate)
+            let result = await ProductModel.findByIdAndUpdate({_id: cid, _id: pid}, productUpdate)
             return result
 
         } catch (error) {
