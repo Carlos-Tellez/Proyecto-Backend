@@ -21,6 +21,7 @@ import MongoStore from "connect-mongo"
 import sesiones from "./router/routesMongo/sesiones.routes.js";
 import initializePassport from "./config/passport.config.js";
 import passport from "passport"
+import config from "./config/config.js";
 
 const app = express();
 
@@ -28,14 +29,14 @@ const app = express();
 const server = http.createServer(app);
 const mensajeM = new MensajesManagerM();
 const io = new Server(server);
+const URL = config.MONGO_URL
 
 
-
-mongoose.connect("mongodb+srv://sbejarano:6exZyyAwm4byMnkh@eccomerce.cpjouqp.mongodb.net/?retryWrites=true&w=majority");
+mongoose.connect(URL);
 
 app.use(session({
     store: MongoStore.create({
-        mongoUrl: "mongodb+srv://sbejarano:6exZyyAwm4byMnkh@eccomerce.cpjouqp.mongodb.net/?retryWrites=true&w=majority",
+        mongoUrl: URL,
         ttl: 3600,
     }),
     secret: "coder secret",
@@ -74,7 +75,9 @@ app.use(passport.initialize())
 app.use(passport.session())
 
 
-server.listen(8080, ()=>{
+const PORT = config.PORT;
+
+server.listen(PORT, ()=>{
 
     console.log("servidor Activo en el puerto: 8080" );
 
