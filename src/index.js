@@ -19,6 +19,8 @@ import vistas from "./router/routesMongo/vistas.router.js";
 import session from "express-session"
 import MongoStore from "connect-mongo"
 import sesiones from "./router/routesMongo/sesiones.routes.js";
+import initializePassport from "./config/passport.config.js";
+import passport from "passport"
 
 const app = express();
 
@@ -66,6 +68,10 @@ app.use("/productosM", productosVista)
 app.use("/carritoM", carritoVista)
 app.use("/", vistas)
 app.use ("/sesiones", sesiones)
+
+initializePassport()
+app.use(passport.initialize())
+app.use(passport.session())
 
 
 server.listen(8080, ()=>{
