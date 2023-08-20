@@ -44,6 +44,10 @@ app.use(session({
     saveUninitialized: false,
 }));
 
+initializePassport()
+app.use(passport.initialize())
+app.use(passport.session())
+
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 
@@ -69,10 +73,6 @@ app.use("/productosM", productosVista)
 app.use("/carritoM", carritoVista)
 app.use("/", vistas)
 app.use ("/sesiones", sesiones)
-
-initializePassport()
-app.use(passport.initialize())
-app.use(passport.session())
 
 
 const PORT = config.PORT;

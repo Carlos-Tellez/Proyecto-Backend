@@ -16,6 +16,7 @@ sesiones.post("/login", passport.authenticate("login", {failureRedirect: "/"}),a
         first_name: req.user.first_name,
         last_name: req.user.last_name,
         email: req.user.email,
+        rol: req.user.rol
     }
     res.send({ status: "success", payload: req.user});
 

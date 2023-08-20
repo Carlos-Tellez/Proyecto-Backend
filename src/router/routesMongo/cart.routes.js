@@ -112,6 +112,22 @@ VistaCarrito.put("/:cid/products/:pid", async (req, res)=> {
         console.log("no fue posible actualizar el producto")
     }
 
-});
+})
+
+VistaCarrito.post("/:cid/purchase", async (req,res)=> {
+    let c_id = req.params.cid;
+    const cart = await carrito.getCartById(c_id);
+   // let detail = req.body;
+
+    try {
+
+
+        let result = await carrito.createticket(c_id)
+        res.send({status:"succes",payload: result})
+    } catch (error) {
+
+        console.log("error al terminar la compra")
+    }
+})
 
 export default VistaCarrito
