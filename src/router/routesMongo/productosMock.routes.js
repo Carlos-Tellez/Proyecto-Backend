@@ -1,7 +1,8 @@
 import { Router } from "express";
 import generateProducts from "../../utils/productosMock.utils.js";
+import { authorization } from "../../config/passport.config.js";
 
-const VistaMock = Router()
+const VistaMock = Router();
 
 
 VistaMock.get("/", async (req, res)=> {
@@ -15,7 +16,7 @@ VistaMock.get("/", async (req, res)=> {
             console.log("no es posible generar los productos" + error)
     }
 
-})
+});
 
 
-export default VistaMock
+export default VistaMock;

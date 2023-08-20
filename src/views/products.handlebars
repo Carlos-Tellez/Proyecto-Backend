@@ -4,11 +4,12 @@
 
     </form>
 
-    <h1>Bienvenido, {{user.first_name}}</h1>
-    <h1>Lista de productos</h1>
+    <h1>Bienvenido, {{user.first_name }}</h1>
+    <h2>Rol: {{user.rol}}</h2>
+    <h3>Lista de productos</h3>
     {{#each productos}}
 
-<h2>{{this.title}}</h2>
+<h3>{{this.title}}</h3>
 <p id="idp">id:{{this._id}}</p>
 <p>descripcion:{{this.description}}</p>
 <p>precio:{{this.price}}</p>

@@ -27,17 +27,20 @@ form.addEventListener('submit', async (event)=> {
     }
 
 });
+
 regis.addEventListener('submit', async (event)=> {
 
     event.preventDefault();
+    const obj = {};
 
     const response = await fetch("/sesiones/regis",{
         method: "POST",
-
+        body: JSON.stringify(obj),
         headers: {
             "Content-Type": "application/json",
         },
     });
+    
     const responseData = await response.json();
     if(responseData.status === "success") {
         window.location.replace("/registro")

@@ -1,7 +1,11 @@
 import { Router } from "express";
 
 import productManagerM from "../../DAO/DBManagers/Mongo/productos.js"
-import {ProductModel} from "../../DAO/models/Mongo/productos.js"
+import CustomErrors from "../../utils/errors/Custom.errors.js";
+import EnumErrors from "../../utils/errors/Enum.errors.js";
+import generateUserErrorInfo from "../../utils/errors/Info.erros.js";
+import { authorization } from "../../config/passport.config.js";
+import passport from "passport";
 
 
 const producto = new productManagerM();
@@ -43,28 +47,40 @@ VistaRealTimeR.get("/:id", async (req, res)=> {
 })
 
 
-VistaRealTimeR.post("/", async (req, res)=> {
-
-    const {id,title, description, category, price, stock} = req.body
-    try { 
-    let result = await producto.createProduct({
-            id,
-            title,
-            description,
-            category,
-            price,
-            stock
-        })
-        res.status(201).json({result: "succes", payload: result})
-    }
-
-    catch (err){
-        console.log("no fue posible crear el producto" + err)
+VistaRealTimeR.post("/",authorization('admin') ,async (req, res, next)=> {
+    try {
+        const {id,title, description, category, price, stock} = req.body
+        if (!title || !description || !category || !price || !stock) {
+            CustomErrors.createError({
+                name: "Product creation error",
+                cause: generateUserErrorInfo({ title, description, category, price, stock }),
+                message: "Error trying to create user",
+                code: EnumErrors.INVALID_TYPES_ERROR,
+            });
+        } 
+        else {
+            try { 
+                let result = await producto.createProduct({
+                    id,
+                    title,
+                    description,
+                    category,
+                    price,
+                    stock
+                })
+                res.status(201).json({result: "succes", payload: result})
+            }
+            catch (err){
+                console.log("no fue posible crear el producto" + err)
+            }
+        }
+    } catch (error) {
+        next(error);
     }
 })
 
 
-VistaRealTimeR.put("/:id", async (req, res)=> {
+VistaRealTimeR.put("/:id", authorization("admin"),async (req, res)=> {
 
     try {
         let {id} = req.params;
@@ -79,8 +95,7 @@ VistaRealTimeR.put("/:id", async (req, res)=> {
 
 })
 
-VistaRealTimeR.delete("/:id", async (req, res)=> {
-
+VistaRealTimeR.delete("/:id", authorization('admin'),async (req, res)=> {
 
     let {id} = req.params;
     let result = await producto.Delete({_id: id})

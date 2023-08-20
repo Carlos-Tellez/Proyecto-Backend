@@ -18,7 +18,7 @@ export default class CartManagerM {
         return result
     }
 
-    createticket = async (cid,cart) => {
+    createticket = async (cid,email) => {
     
         let carrito = await cartModel.findOne({ _id: cid })
 
@@ -32,28 +32,32 @@ export default class CartManagerM {
             let producto = await ProductModel.findOne({ _id: productId })
             const total = producto.incart * producto.price
             console.log(total)
-            let result1 = await ProductModel.updateMany(
-            { _id: { $in: products } },
-            [
-                {
-                    $set: {
-                        stock: {
-                            $subtract: ["$stock", "$incart"]
+
+            if (producto.stock > producto.incart) {
+                let result1 = await ProductModel.updateMany(
+                    { _id: { $in: products } },
+                    [
+                        {
+                            $set: {
+                                stock: {
+                                $subtract: ["$stock", "$incart"]
+                                }
+                            }
                         }
-                    }
+                    ]
+                );
+
+                let compra = {
+                    "id_carrito": cid,
+                    "amount": total,
+                    "email": email
                 }
-            ]
-            );
 
-
-            let compra = {
-            "id_carrito": cid,
-            "amount": total,
-            "email": ""
-        }
-
-            let result2 = await ticketModel.create(compra)
-            return result1 && result2
+                let result2 = await ticketModel.create(compra)
+                return result1 && result2
+                } else {
+                    console.log("stock insuficiente")
+                }
 
         } catch (error) {
             console.log("error al actualizar el stock")

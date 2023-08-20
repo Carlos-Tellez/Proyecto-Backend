@@ -58,8 +58,7 @@ export default class productManagerM {
     createProduct = async(product) => {
 
         try { 
-        let result = await ProductModel.create(product)
-
+            let result = await ProductModel.create(product)
             return result
         }
 

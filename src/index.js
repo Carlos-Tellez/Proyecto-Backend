@@ -24,6 +24,7 @@ import passport from "passport"
 import config from "./config/config.js";
 import morgan from "morgan"
 import VistaMock from "./router/routesMongo/productosMock.routes.js"
+import errorHandler from "./middlewars.erros/index.js"
 
 const app = express();
 
@@ -46,9 +47,9 @@ app.use(session({
     saveUninitialized: false,
 }));
 
-initializePassport()
-app.use(passport.initialize())
-app.use(passport.session())
+initializePassport();
+app.use(passport.initialize());
+app.use(passport.session());
 
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
@@ -78,6 +79,7 @@ app.use("/", vistas)
 app.use ("/sesiones", sesiones)
 app.use("/mocking", VistaMock)
 
+app.use(errorHandler)
 
 const PORT = config.PORT;
 
