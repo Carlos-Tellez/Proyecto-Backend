@@ -46,7 +46,6 @@ VistaRealTimeR.get("/:id", async (req, res)=> {
 VistaRealTimeR.post("/", async (req, res)=> {
 
     const {id,title, description, category, price, stock} = req.body
-    //if(!id)
     try { 
     let result = await producto.createProduct({
             id,

@@ -22,6 +22,8 @@ import sesiones from "./router/routesMongo/sesiones.routes.js";
 import initializePassport from "./config/passport.config.js";
 import passport from "passport"
 import config from "./config/config.js";
+import morgan from "morgan"
+import VistaMock from "./router/routesMongo/productosMock.routes.js"
 
 const app = express();
 
@@ -50,6 +52,7 @@ app.use(passport.session())
 
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
+app.use(morgan("dev"))
 
 //handlebars
 app.engine("handlebars", handlebars.engine())
@@ -73,6 +76,7 @@ app.use("/productosM", productosVista)
 app.use("/carritoM", carritoVista)
 app.use("/", vistas)
 app.use ("/sesiones", sesiones)
+app.use("/mocking", VistaMock)
 
 
 const PORT = config.PORT;
