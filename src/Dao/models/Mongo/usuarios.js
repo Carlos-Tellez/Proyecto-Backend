@@ -9,7 +9,9 @@ const usuarioSchema = new mongoose.Schema({
     email: String,
     age: Number,
     password: String,
-    rol: { type: String, default: 'user' } 
+    rol: { type: String, default: 'user' } ,
+    resetPasswordToken: String, // Token para restablecer contraseña
+    resetPasswordExpires: Date, // Fecha de expiración del token de restablecimiento
 })
 
 const usuarioModel = mongoose.model(collection, usuarioSchema)

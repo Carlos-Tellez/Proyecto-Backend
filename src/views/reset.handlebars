@@ -1,0 +1,16 @@
+<section>
+
+    <h1>Restablecer Contraseña</h1>
+    <form id="resetPassword">
+        <!-- Campos para restablecer la contraseña -->
+        <label>Nueva Contraseña:</label>
+        <input type="password" id="password" name="password" required>
+        <input type="hidden" name="token" value="{{ token }}"> <!-- Agregar un campo oculto para enviar el token -->
+        <button type="submit">Restablecer Contraseña</button>
+    </form>
+
+
+    </section>
+
+
+<script src="./reestablecer.js"></script>
