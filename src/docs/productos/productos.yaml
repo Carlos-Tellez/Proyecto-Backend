@@ -1,0 +1,116 @@
+openapi: "3.1.0"
+info:
+  title: API de Productos
+  version: "1.0"
+paths:
+  /viewR:
+    get:
+      summary: Obtiene todos los productos
+      tags:
+        - Productos
+      responses:
+        "200":
+          description: Lista de productos obtenida correctamente
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Product"
+    post:
+      summary: Crea un nuevo producto
+      tags:
+        - Productos
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Product"
+      responses:
+        "201":
+          description: Producto creado correctamente
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Product"
+  /viewR/{id}:
+    get:
+      summary: Obtiene un producto por su ID
+      tags:
+        - Productos
+      parameters:
+        - in: path
+          name: id
+          schema:
+            type: string
+          required: true
+          description: ID del producto que se quiere obtener
+      responses:
+        "200":
+          description: Producto obtenido correctamente
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Product"
+    put:
+      summary: Actualiza un producto existente
+      tags:
+        - Productos
+      parameters:
+        - in: path
+          name: id
+          schema:
+            type: string
+          required: true
+          description: ID del producto que se quiere actualizar
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Product"
+    delete:
+      summary: Elimina un producto por su ID
+      tags:
+        - Productos
+      parameters:
+        - in: path
+          name: id
+          schema:
+            type: string
+          required: true
+          description: ID del producto que se quiere eliminar
+      responses:
+        "200":
+          description: Producto eliminado correctamente
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Product"
+
+
+
+components:
+  schemas:
+    Product:
+      type: object
+      properties:
+        id:
+          type: string
+          description: ID del producto
+        title:
+          type: string
+          description: Título del producto
+        description:
+          type: string
+          description: Descripción del producto
+        category:
+          type: string
+          description: Categoría del producto
+        price:
+          type: number
+          description: Precio del producto
+        stock:
+          type: number
+          description: Stock del producto

@@ -1,0 +1,218 @@
+openapi: "3.1.0"
+info:
+  title: API Productos y Carrito
+  version: "1.0"
+paths:
+  /carrito:
+    post:
+      summary: Crea un nuevo carrito
+      tags:
+        - Carrito
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/Carrito"
+      responses:
+        "201":
+          description: Carrito creado correctamente
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Carrito"
+    get:
+      summary: Obtiene todos los carritos
+      tags:
+        - Carrito
+      responses:
+        "200":
+          description: Lista de carritos obtenida correctamente
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  $ref: "#/components/schemas/Carrito"
+  /carrito/{id}:
+    get:
+      summary: Obtiene un carrito por su ID
+      tags:
+        - Carrito
+      parameters:
+        - in: path
+          name: id
+          schema:
+            type: string
+          required: true
+          description: ID del carrito que se quiere obtener
+      responses:
+        "200":
+          description: Carrito obtenido correctamente
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Carrito"
+    delete:
+      summary: Elimina un carrito o un producto del carrito por su ID
+      tags:
+        - Carrito
+      parameters:
+        - in: path
+          name: id
+          schema:
+            type: string
+          required: true
+          description: ID del carrito o del producto que se quiere eliminar
+      responses:
+        "200":
+          description: Elemento eliminado correctamente
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Carrito"
+  /carrito/{id}/products/{pid}:
+    delete:
+      summary: Elimina un producto del carrito por su ID
+      tags:
+        - Carrito
+      parameters:
+        - in: path
+          name: id
+          schema:
+            type: string
+          required: true
+          description: ID del carrito al que se quiere eliminar el producto
+        - in: path
+          name: pid
+          schema:
+            type: string
+          required: true
+          description: ID del producto que se quiere eliminar del carrito
+      responses:
+        "200":
+          description: Producto eliminado del carrito correctamente
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Carrito"
+    put:
+      summary: Actualiza un producto del carrito por su ID
+      tags:
+        - Carrito
+      parameters:
+        - in: path
+          name: cid
+          schema:
+            type: string
+          required: true
+          description: ID del carrito al que pertenece el producto
+        - in: path
+          name: pid
+          schema:
+            type: string
+          required: true
+          description: ID del producto que se quiere actualizar en el carrito
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/ProductInCart"
+      responses:
+        "200":
+          description: Producto actualizado correctamente
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Carrito"
+  /carrito/{cid}/purchase:
+    post:
+      summary: Crea un ticket de compra para un carrito
+      tags:
+        - Carrito
+      parameters:
+        - in: path
+          name: cid
+          schema:
+            type: string
+          required: true
+          description: ID del carrito para el cual se quiere generar el ticket
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: "#/components/schemas/TicketRequest"
+      responses:
+        "201":
+          description: Ticket de compra generado correctamente
+          content:
+            application/json:
+              schema:
+                $ref: "#/components/schemas/Ticket"
+
+components:
+  schemas:
+    Carrito:
+      type: object
+      properties:
+        id:
+          type: string
+          description: ID del carrito
+        products:
+          type: array
+          items:
+            $ref: "#/components/schemas/Product"
+    Product:
+      type: object
+      properties:
+        id:
+          type: string
+          description: ID del producto
+        title:
+          type: string
+          description: Título del producto
+        description:
+          type: string
+          description: Descripción del producto
+        category:
+          type: string
+          description: Categoría del producto
+        price:
+          type: number
+          description: Precio del producto
+        stock:
+          type: number
+          description: Cantidad en stock del producto
+    ProductInCart:
+      type: object
+      properties:
+        pid:
+          type: string
+          description: ID del producto
+        cantidad:
+          type: integer
+          description: Cantidad del producto en el carrito
+    Ticket:
+      type: object
+      properties:
+        id_carrito:
+          type: string
+          description: ID del carrito
+        purchase_date:
+          type: string
+          format: date-time
+          description: Fecha de compra del ticket
+        amount:
+          type: string
+          description: Monto del ticket
+        email:
+          type: string
+          description: Correo electrónico del cliente
+    TicketRequest:
+      type: object
+      properties:
+        email:
+          type: string
+          description: Correo electrónico del cliente para generar el ticket
