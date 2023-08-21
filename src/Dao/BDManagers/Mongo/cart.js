@@ -4,6 +4,7 @@ import productManagerM from "../Mongo/productos.js"
 import { ProductModel } from "../../models/Mongo/productos.js";
 import {ticketModel} from "../../models/Mongo/ticket.js"
 import usuarioModel from "../../models/Mongo/usuarios.js";
+import logger from "../../../utils/logger/logger.js";
 
 
 const productManager = new productManagerM();
@@ -14,8 +15,14 @@ export default class CartManagerM {
     }
 
     createCart = async carrito => {
-        let result = await cartModel.create(carrito)
-        return result
+        try {
+            let result = await cartModel.create(carrito)
+            logger.info("carrito creado con exito")
+            return result
+        } catch (error) {
+            logger.debug(error)
+            logger.error("no es posible crear el carrito")
+        }
     }
 
     createticket = async (cid,email) => {
@@ -54,19 +61,22 @@ export default class CartManagerM {
                 }
 
                 let result2 = await ticketModel.create(compra)
+                logger.info("el ticket se a creado con exito")
                 return result1 && result2
                 } else {
-                    console.log("stock insuficiente")
+                    logger.warning("Stock insuficiente")
                 }
 
         } catch (error) {
-            console.log("error al actualizar el stock")
+            logger.warning("No es posible actualizar el stock")
+            logger.debug(error)
         }
 
     }
 
     } catch (error) {
-        console.log("error al crear el ticket"+ error)
+        logger.error("Se a presentado un error al crear el ticket en la base de datos")
+        logger.debug(error)
     }
 
 
@@ -76,11 +86,13 @@ export default class CartManagerM {
 
     try {
         let cart = await cartModel.find().populate("products")
+        logger.info("Carritos  totales consultados")
         return cart
     }
 
     catch (err) {
-        console.log("no es posible traer el carrito")
+        logger.error("no es posible consultar los carritos en la base de datos")
+        logger.debug(err)
     }
 
     }
@@ -111,11 +123,14 @@ export default class CartManagerM {
             $pull: { products: { _id: productid } },
             }
         );
+        logger.info("producto eliminado de carrito con exito")
+
         return products[0];
 
 
     } catch (error) {
-        console.log("no se pudo eliminar el producto del carrito" + error)
+        logger.debug(error)
+        logger.error("No es posible eliminar el producto del carrito")
     }
     }
 
@@ -123,10 +138,12 @@ export default class CartManagerM {
 
     try {
         let carrito = await cartModel.findOne({ _id: id }).populate("products")
+        logger.info("carrito especifico consultado con exito")
         return carrito
     }
     catch (err) {
-        console.log("no es posible buscar el carrito")
+        logger.debug(err)
+        logger.error("no es posible buscar el carrito especifico")
     }
     }
 
@@ -143,12 +160,14 @@ export default class CartManagerM {
         }
         const cantidadT = product.incart + cantidad
 
+        logger.info("producto añadido al carrito con exito")
         return await cartModel.findByIdAndUpdate(
         { _id: cart_id },
         { $push: { products: product }, cantidadT }
         );
     } catch (err) {
-        console.log("no es posible" + err)
+        logger.debug(err)
+        logger.error("no es posible agregar el producto al carrito")
     }
 
     }
@@ -158,10 +177,12 @@ export default class CartManagerM {
 
     try {
         let result = await ProductModel.findByIdAndUpdate({ _id: cid, _id: pid }, productUpdate)
+        logger.info("carrito actualizado con exito")
         return result
 
     } catch (error) {
-        console.log("no fue posible actualizar el producto")
+        logger.debug(error)
+        logger.error("erro al actualizar el carrito")
     }
 
     }

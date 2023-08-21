@@ -6,6 +6,7 @@ import EnumErrors from "../../utils/errors/Enum.errors.js";
 import generateUserErrorInfo from "../../utils/errors/Info.erros.js";
 import { authorization } from "../../config/passport.config.js";
 import passport from "passport";
+import logger from "../../utils/logger/logger.js";
 
 
 const producto = new productManagerM();
@@ -13,7 +14,7 @@ const VistaRealTimeR = Router()
 
 
 
-VistaRealTimeR.get("/", async (req, res)=> {
+VistaRealTimeR.get("/",/*authorization('user'),*/ async (req, res)=> {
 
     try {
 
@@ -24,10 +25,12 @@ VistaRealTimeR.get("/", async (req, res)=> {
         let price = req.query.price
 
         let products = await producto.getAll(page ,limit, category, q, price)
+        logger.http("ruta accesible")
         res.json({result: "succes", payload:  products})
     }
     catch (err) {
-            console.log("no es posible conectar")
+        logger.fatal("no es posible acceder a la ruta")
+        logger.debug(err)
     }
 
 });
@@ -38,16 +41,18 @@ VistaRealTimeR.get("/:id", async (req, res)=> {
     try {
         let id = req.params.id
         let products = await producto.getByYd(id)
+        logger.http("ruta accesible")
         res.json({result: "succes", payload:  products})
     }
     catch (err) {
-        console.log("no es posible buscar el producto")
+        logger.fatal("no es posible acceder a la ruta")
+        logger.debug(err)
     }
 
-})
+});
 
 
-VistaRealTimeR.post("/",authorization('admin') ,async (req, res, next)=> {
+VistaRealTimeR.post("/",/*authorization('admin') ,*/async (req, res, next)=> {
     try {
         const {id,title, description, category, price, stock} = req.body
         if (!title || !description || !category || !price || !stock) {
@@ -68,39 +73,51 @@ VistaRealTimeR.post("/",authorization('admin') ,async (req, res, next)=> {
                     price,
                     stock
                 })
+                logger.http("ruta accesible")
                 res.status(201).json({result: "succes", payload: result})
             }
             catch (err){
-                console.log("no fue posible crear el producto" + err)
+                logger.fatal("no es posible acceder a la ruta")
+                logger.debug(err)
             }
         }
     } catch (error) {
         next(error);
     }
-})
+});
 
 
-VistaRealTimeR.put("/:id", authorization("admin"),async (req, res)=> {
+VistaRealTimeR.put("/:id",/* authorization("admin"),*/async (req, res)=> {
 
     try {
         let {id} = req.params;
         let productUpdate = req.body;
 
         let result = await producto.Update({_id: id}, productUpdate)
+        logger.http("ruta accesible")
         res.send({status: "succes", payload: result})
 
     } catch (error) {
-        console.log("no fue posible actualizar el producto")
+        logger.fatal("no es posible acceder a la ruta")
+        logger.debug(err)
     }
 
-})
+});
 
-VistaRealTimeR.delete("/:id", authorization('admin'),async (req, res)=> {
+VistaRealTimeR.delete("/:id",/* authorization('admin'),*/async (req, res)=> {
 
-    let {id} = req.params;
-    let result = await producto.Delete({_id: id})
-    res.send({status: "success", payload: result})
-})
+    try {
+        let {id} = req.params;
+        let result = await producto.Delete({_id: id})
+        logger.http("ruta accesible")
+        res.send({status: "success", payload: result})
+    } 
+
+    catch (error) {
+        logger.fatal("no es posible acceder a la ruta")
+        logger.debug(err)
+    }
+});
 
 
 

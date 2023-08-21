@@ -1,5 +1,6 @@
 import { query } from "express";
 import { ProductModel } from "../../models/Mongo/productos.js";
+import logger from "../../../utils/logger/logger.js";
 
 export default class productManagerM {
 
@@ -9,7 +10,7 @@ export default class productManagerM {
     }
 
 
-    getAll = async (pageR, limitR,categoryR, q, priceR ) => {
+    getAll = async (pageR, limitR, categoryR, q, priceR) => {
 
         try {
 
@@ -20,17 +21,18 @@ export default class productManagerM {
             if(categoryR) {
                 filter.category = categoryR;
             }
-            let products = await ProductModel.paginate(filter,{limit, page, sort:{price:precioS} })
-
+            let products = await ProductModel.paginate(filter, { limit, page, sort: { price: precioS } })
+            logger.info("productos consultados con exito")
             return products 
         }
         catch (err) {
-            console.log("no es posible traer los productos")
+            logger.debug(err)
+            logger.error("no es posible consultar los productos")
         }
 
     }
 
-    getAll2 = async (page, limit,category, q) => {
+    getAll2 = async (page, limit, category, q) => {
 
     try {
 
@@ -43,27 +45,29 @@ export default class productManagerM {
         }
         if(category) query.category = category;
 
-        let products = await ProductModel.find(query).limit(limitRecords).skip(skip).lean()
-
+        logger.info("productos consultados con exito")
         return products
     }
 
     
     catch (err) {
-            console.log("no es posible traer los productos")
+        logger.debug(err)
+        logger.error("no es posible consultar los productos")
     }
 
     }
 
-    createProduct = async(product) => {
+    createProduct = async (product) => {
 
-        try { 
+        try {
             let result = await ProductModel.create(product)
+            logger.info("producto creado con exito")
             return result
         }
 
-        catch (err){
-            console.log("no fue posible crear el producto" + err)
+        catch (err) {
+            logger.debug(err)
+            logger.error("no es posible crear el producto")
         }
     }
 
@@ -71,36 +75,40 @@ export default class productManagerM {
 
 
         try {
-            let products = await ProductModel.findOne({ _id: id})
+            let products = await ProductModel.findOne({ _id: id })
+            logger.info("producto especifico consultado con exito")
             return products
         }
         catch (err) {
-            console.log("no es posible buscar el producto")
+            logger.debug(err)
+            logger.error("no es posible consultar el producto especifico")
         }
 
     }
 
     Update = async (id, productUpdate) => {
-
-        try {
-            let result = await ProductModel.updateOne({_id: id}, productUpdate)
-
-        return result
-
-        } catch (error) {
-            console.log("no fue posible actualizar el producto")
+        try{
+            let result = await ProductModel.updateOne({ _id: id }, productUpdate)
+            logger.info("producto actualizado con exito")
+            return result
+        } 
+        catch (error) {
+            logger.debug(err)
+            logger.error("no es posible actualizar el producto")
         }
-
     }
 
 
     Delete = async (id) => {
 
         try {
-            let result = await ProductModel.deleteOne({_id: id})
-        return result
-        } catch (error) {
-            console.log("no fue posible eliminar el producto")
+            let result = await ProductModel.deleteOne({ _id: id })
+            logger.info("producto eliminado con exito")
+            return result
+        } 
+        catch (error) {
+            logger.debug(err)
+            logger.error("no es posible eliminar el producto")
         }
 
     }
