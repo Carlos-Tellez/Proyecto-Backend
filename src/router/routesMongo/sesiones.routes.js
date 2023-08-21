@@ -1,6 +1,10 @@
 import { Router } from "express";
 import usuarioModel from "../../DAO/models/Mongo/usuarios.js"
 import passport from "passport"
+import nodemailer from "nodemailer"
+import { generateRandomToken, hashPassword, createHash } from "../../utils.js";
+import jwt from "jsonwebtoken";
+import { isValidPassword } from "../../utils.js";
 
 
 import nodemailer from "nodemailer"
@@ -13,18 +17,27 @@ sesiones.post("/registro", passport.authenticate("registro", {failureRedirect: "
     res.send({status:"success", message: "Usuario registrado"})
 });
 
-sesiones.post("/login", passport.authenticate("login", {failureRedirect: "/"}),async (req,res)=> {
-
-    if(!req.user) return res.status(400).send({ status: "error", error: "Credenciales invalidades"})
-    req.session.user = {
-        first_name: req.user.first_name,
-        last_name: req.user.last_name,
-        email: req.user.email,
-        rol: req.user.rol
+sesiones.post("/login", async (req, res) => {
+    // Aquí realizas la autenticación del usuario y si es válido, creas el token JWT
+    const user = await usuarioModel.findOne({ email: req.body.email });
+    if (!user || !isValidPassword(user, req.body.password)) {
+        return res.status(401).send({ status: "error", error: "Credenciales inválidas" });
     }
-    res.send({ status: "success", payload: req.user});
 
+    const token = jwt.sign({ email: user.email }, "mi_secreto", { expiresIn: "1h" });
+
+    req.session.user = {
+        first_name: user.first_name,
+        last_name: user.last_name,
+        email: user.email,
+        rol: user.rol
+      // Otros datos que quieras almacenar
+    };
+
+    // Devuelves el token en la respuesta
+    res.send({ status: "success", token });
 });
+
 
 sesiones.post("/regis", (req,res)=> {
 

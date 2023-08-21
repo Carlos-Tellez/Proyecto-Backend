@@ -10,7 +10,7 @@ const ticketSchema = new mongoose.Schema({
 
     purchase_date: { type: Date, default: Date.now },
     amount: String,
-    email: String  
+    email:{type: String , require: true } 
 
 })
 

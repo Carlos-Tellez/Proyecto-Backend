@@ -17,6 +17,8 @@ form.addEventListener('submit', async (event)=> {
     });
     const responseData = await response.json();
     if(responseData.status === "success") {
+        const jwtToken = responseData.token;
+        window.localStorage.setItem('jwtToken', jwtToken);
         window.location.replace("/productosM")
     }
 

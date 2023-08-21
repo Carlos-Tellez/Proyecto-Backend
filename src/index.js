@@ -25,6 +25,7 @@ import config from "./config/config.js";
 import morgan from "morgan"
 import VistaMock from "./router/routesMongo/productosMock.routes.js"
 import errorHandler from "./middlewars.erros/index.js"
+import usuarios from "./router/routesMongo/usuarios.routes.js";
 
 const app = express();
 
@@ -70,14 +71,15 @@ app.use("/cart",CartR)
 app.use("/view",VistaR)
 
 //VISTA CON MONGO
+app.use ("/sesiones", sesiones)
+app.use("/", vistas)
 app.use("/viewR",VistaRealTimeR)
 app.use("/carrito", VistaCarrito)
 app.use("/chatR",ChatR )
 app.use("/productosM", productosVista)
 app.use("/carritoM", carritoVista)
-app.use("/", vistas)
-app.use ("/sesiones", sesiones)
 app.use("/mocking", VistaMock)
+app.use("/usuarios", usuarios)
 
 app.use(errorHandler)
 

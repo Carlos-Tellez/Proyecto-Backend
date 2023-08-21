@@ -12,7 +12,8 @@ const productSchema = new mongoose.Schema({
     price: { type: Number, require: true },
     stock: { type: Number, require: true },
     incart: {type: Number, default: 0 },
-    total: {type: Number, default: 0}
+    total: {type: Number, default: 0},
+    owner: {type: String, default: "admin"}
 
 })
 

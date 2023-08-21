@@ -2,8 +2,25 @@ import passport from "passport";
 import local from "passport-local";
 import usuarioModel from "../DAO/models/Mongo/usuarios.js";
 import { createHash, isValidPassword } from "../utils.js";
+import jwt from "jsonwebtoken";
+import bcrypt from "bcrypt";
 
 const localStrategy = local.Strategy
+
+export const authenticateToken = (req, res, next) => {
+    const token = req.headers.authorization && req.headers.authorization.split(" ")[1];
+    if (!token) {
+        return res.status(401).send({ status: "error", error: "Token no proporcionado" });
+    }
+
+    jwt.verify(token, "mi_secreto", (err, user) => {
+        if (err) {
+            return res.status(403).send({ status: "error", error: "Token inválido" });
+        }
+        req.user = user;
+        next();
+    });
+};
 
 const initializePassport = () => {
     passport.use("registro",new LocalStrategy({ passReqToCallback: true, usernameField: "email" },async (req, username, password, done) => {

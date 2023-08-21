@@ -4,6 +4,7 @@ import { ObjectId } from "mongoose";
 import productManagerM from "../../DAO/DBManagers/Mongo/productos.js"
 import { authorization } from "../../config/passport.config.js";
 import logger from "../../utils/logger/logger.js";
+import authenticateToken from "../../config/authMiddleware.js";
 
 const carrito = new CartManagerM();
 const producto = new productManagerM();
@@ -136,10 +137,10 @@ VistaCarrito.put("/:cid/products/:pid", async (req, res) => {
 
 });
 
-VistaCarrito.post("/:cid/purchase", async (req, res) => {
+VistaCarrito.post("/:cid/purchase", /*authenticateToken,*/async (req, res) => {
     let c_id = req.params.cid;
     const cart = await carrito.getCartById(c_id);
-    const email = req.session.user
+    const email = req.session
 
     try {
         let result = await carrito.createticket(c_id, email)
