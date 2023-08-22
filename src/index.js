@@ -6,7 +6,7 @@ import * as path from "path";
 import __dirname from "./utils.js";
 import VistaR from "./router/routesFileSystem/vista.routes.js";
 import { Server } from "socket.io";
-import VistaRealTimeR from "./router/routesMongo/Products.routes.js";
+import VistaRealTimeR from "./router/routesMongo/products.routes.js";
 import mongoose from "mongoose";
 import VistaCarrito from "../src/router/routesMongo/cart.routes.js";
 import ChatR from "./router/routesMongo/mensajes.js";

@@ -7,7 +7,8 @@
   "scripts": {
     "test": "mocha src/test/productos.test.js",
     "test1": "mocha src/test/cart.test.js",
-    "dev": "nodemon src/index.js"
+    "dev": "nodemon src/index.js",
+    "start": "nodemon src/index.js"
   },
   "keywords": [],
   "author": "Carlos Tellez",

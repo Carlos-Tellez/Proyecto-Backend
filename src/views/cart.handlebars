@@ -1,12 +1,11 @@
-<div id="container">
-    <h1>Carrito</h1>
+<h1>Carrito</h1>
 
-{{#each carritos}}
-
-    <p id="idp"><strong>Id de carrito:</strong> {{this._id}}</p>
-    <p><strong>Id de productos agregados:</strong> {{this.products}}</p>
-
+{{#each carritos }}
+<div>
+    <p><strong>ID de carrito:</strong> <span>{{this._id}}</span></p>
+    <p>ID de productos agregados: {{this.products}}</p>
+    <button class="comprar-btn" data-carrito-id="{{this._id}}">Comprar</button>
+</div>
 {{/each}}
 
-
-</div>
+<script  src="../ticket.js"></script>

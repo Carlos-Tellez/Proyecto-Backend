@@ -1,6 +1,7 @@
 <div id="container">
     <form action="" id="Logout">
         <button type="submit">Logout</button>
+        <button >  <a href="http://localhost:8080/carritoM/649cd48c8722f190e45974da">Carrito</a></button>
 
     </form>
 
@@ -9,16 +10,17 @@
     <h3>Lista de productos</h3>
     {{#each productos}}
 
-<h3>{{this.title}}</h3>
-<p id="idp">id:{{this._id}}</p>
-<p>descripcion:{{this.description}}</p>
-<p>precio:{{this.price}}</p>
-<p>categoria: {{this.category}}</p>
-<p>stock: {{this.stock}}</p>
-<button id="agregar" >Agregar</button>
-{{/each}}
+    <h3>{{this.title}}</h3>
+    <p id="idp{{this._id}}">{{this._id}}</p>
+    <p>descripcion:{{this.description}}</p>
+    <p>precio:{{this.price}}</p>
+    <p>categoria: {{this.category}}</p>
+    <p>stock: {{this.stock}}</p>
+    <button class="agregar-btn" data-product-id="{{this._id}}">Agregar</button>
+    {{/each}}
 
 
 </div>
 
+<script type="module" src="./eventosP.js"></script>
 <script src="./logout.js"></script>

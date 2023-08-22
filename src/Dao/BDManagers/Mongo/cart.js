@@ -57,7 +57,7 @@ export default class CartManagerM {
                 let compra = {
                     "id_carrito": cid,
                     "amount": total,
-                    "email": email
+                    "email": ""
                 }
 
                 let result2 = await ticketModel.create(compra)
@@ -68,8 +68,9 @@ export default class CartManagerM {
                 }
 
         } catch (error) {
-            logger.warning("No es posible actualizar el stock")
+            console.log(error)
             logger.debug(error)
+            logger.warning("No es posible actualizar el stock")
         }
 
     }
