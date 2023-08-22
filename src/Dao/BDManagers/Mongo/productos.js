@@ -15,7 +15,7 @@ export default class productManagerM {
         try {
 
             const limit = parseInt(limitR, 10) || 10;
-            const page = parseInt(pageR,1) || 1;
+            const page = parseInt(pageR, 10) || 10;
             const precioS = parseInt(priceR)
             const filter = {};
             if(categoryR) {
@@ -23,6 +23,7 @@ export default class productManagerM {
             }
             let products = await ProductModel.paginate(filter, { limit, page, sort: { price: precioS } })
             logger.info("productos consultados con exito")
+            console.log(products);
             return products 
         }
         catch (err) {
@@ -52,6 +53,7 @@ export default class productManagerM {
     
     catch (err) {
         logger.debug(err)
+        console.log(err)
         logger.error("no es posible consultar los productos")
     }
 

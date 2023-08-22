@@ -22,7 +22,7 @@ VistaCarrito.post("/", async (req, res) => {
         }
         const result2 = await carrito.createCart(result);
         logger.http("ruta accesible")
-        res.status(201).json({ result: "succes", payload: result2 })
+        res.status(201).json({ result: "success", payload: result2 })
     }
 
     catch (err){
@@ -80,7 +80,7 @@ VistaCarrito.get("/:id", async (req, res) => {
         let id = req.params.id
         let products = await carrito.getCartById(id)
         logger.http("ruta accesible")
-        res.json({ result: "succes", payload: products })
+        res.json({ result: "success", payload: products })
     }
     catch (err) {
         logger.fatal("no es posible acceder a la ruta")
