@@ -1,81 +1,265 @@
-2023-08-19T15:57:38.046Z [[31MERROR[39M]: [31mno es posible buscar el pruducto[39m
-2023-08-19T15:57:38.087Z [[31MERROR[39M]: [31mno es posible buscar el pruducto[39m
-2023-08-19T19:30:48.655Z [[32MINFO[39M]: [32mCarritos  totales consultados[39m
-2023-08-19T19:31:46.852Z [[32MINFO[39M]: [32mCarritos  totales consultados[39m
-2023-08-19T19:33:53.189Z [[32MINFO[39M]: [32mCarritos  totales consultados[39m
-2023-08-19T19:34:23.122Z [[31MERROR[39M]: [31mno es posible consultar el producto especifico[39m
-2023-08-19T19:34:39.248Z [[32MINFO[39M]: [32mCarritos  totales consultados[39m
-2023-08-19T19:34:42.132Z [[32MINFO[39M]: [32mCarritos  totales consultados[39m
-2023-08-19T19:34:43.238Z [[32MINFO[39M]: [32mCarritos  totales consultados[39m
-2023-08-19T19:34:44.324Z [[32MINFO[39M]: [32mCarritos  totales consultados[39m
-2023-08-19T19:34:45.314Z [[32MINFO[39M]: [32mCarritos  totales consultados[39m
-2023-08-19T20:04:09.198Z [[32MINFO[39M]: [32mCarritos  totales consultados[39m
-2023-08-19T20:04:13.502Z [[32MINFO[39M]: [32mcarrito especifico consultado con exito[39m
-2023-08-19T20:15:42.833Z [[32MINFO[39M]: [32mcarrito especifico consultado con exito[39m
-2023-08-19T20:15:47.029Z [[32MINFO[39M]: [32mCarritos  totales consultados[39m
-2023-08-19T20:15:52.104Z [[32MINFO[39M]: [32mproductos consultados con exito[39m
-2023-08-19T20:15:55.987Z [[32MINFO[39M]: [32mproducto especifico consultado con exito[39m
-2023-08-19T23:02:28.634Z [[32MINFO[39M]: [32mproductos consultados con exito[39m
-2023-08-19T23:02:33.119Z [[32MINFO[39M]: [32mproductos consultados con exito[39m
-2023-08-19T23:22:11.961Z [[32MINFO[39M]: [32mproductos consultados con exito[39m
-2023-08-21T23:12:50.569Z [[32MINFO[39M]: [32mproductos consultados con exito[39m
-2023-08-22T01:37:38.252Z [[32MINFO[39M]: [32mproductos consultados con exito[39m
-2023-08-22T02:18:53.039Z [[32MINFO[39M]: [32mproductos consultados con exito[39m
-2023-08-22T02:20:00.855Z [[32MINFO[39M]: [32mproductos consultados con exito[39m
-2023-08-22T02:21:04.144Z [[32MINFO[39M]: [32mproductos consultados con exito[39m
-2023-08-22T02:51:15.086Z [[32MINFO[39M]: [32mproductos consultados con exito[39m
-2023-08-24T22:42:14.278Z [[32MINFO[39M]: [32mcarrito especifico consultado con exito[39m
-2023-08-24T22:42:14.679Z [[32MINFO[39M]: [32mticket creado con exito[39m
-2023-08-24T22:52:43.272Z [[32MINFO[39M]: [32mproductos consultados con exito[39m
-2023-08-24T22:52:49.720Z [[32MINFO[39M]: [32mcarrito especifico consultado con exito[39m
-2023-08-24T22:52:50.094Z [[32MINFO[39M]: [32mticket creado con exito[39m
-2023-08-24T23:06:54.730Z [[32MINFO[39M]: [32mproductos consultados con exito[39m
-2023-08-24T23:06:59.747Z [[32MINFO[39M]: [32mcarrito especifico consultado con exito[39m
-2023-08-24T23:07:00.112Z [[32MINFO[39M]: [32mticket creado con exito[39m
-2023-08-24T23:18:46.953Z [[32MINFO[39M]: [32mproducto especifico consultado con exito[39m
-2023-08-24T23:18:47.044Z [[32MINFO[39M]: [32mcarrito especifico consultado con exito[39m
-2023-08-24T23:18:47.126Z [[31MERROR[39M]: [31mno es posible agregar el producto al carrito[39m
-2023-08-24T23:47:33.566Z [[32MINFO[39M]: [32mproductos consultados con exito[39m
-2023-08-24T23:54:12.245Z [[32MINFO[39M]: [32mproductos consultados con exito[39m
-2023-08-24T23:54:37.758Z [[32MINFO[39M]: [32mproductos consultados con exito[39m
-2023-08-24T23:55:30.924Z [[32MINFO[39M]: [32mproductos consultados con exito[39m
-2023-08-24T23:58:45.040Z [[32MINFO[39M]: [32mcarrito especifico consultado con exito[39m
-2023-08-24T23:58:45.420Z [[32MINFO[39M]: [32mticket creado con exito[39m
-2023-08-25T00:00:07.924Z [[32MINFO[39M]: [32mcarrito especifico consultado con exito[39m
-2023-08-25T00:09:05.521Z [[32MINFO[39M]: [32mcarrito especifico consultado con exito[39m
-2023-08-25T00:11:00.414Z [[32MINFO[39M]: [32mcarrito especifico consultado con exito[39m
-2023-08-25T00:14:26.283Z [[32MINFO[39M]: [32mproductos consultados con exito[39m
-2023-08-25T00:32:11.097Z [[32MINFO[39M]: [32mproductos consultados con exito[39m
-2023-08-25T02:21:02.279Z [[32MINFO[39M]: [32mproductos consultados con exito[39m
-2023-08-25T02:31:53.694Z [[32MINFO[39M]: [32mproductos consultados con exito[39m
-2023-08-25T02:43:13.531Z [[32MINFO[39M]: [32mcarrito especifico consultado con exito[39m
-2023-08-25T02:50:47.301Z [[32MINFO[39M]: [32mproducto eliminado con exito[39m
-2023-08-25T02:53:08.113Z [[32MINFO[39M]: [32mproducto eliminado con exito[39m
-2023-08-25T03:02:19.048Z [[32MINFO[39M]: [32mproducto eliminado con exito[39m
-2023-08-25T03:02:20.007Z [[32MINFO[39M]: [32mproducto eliminado con exito[39m
-2023-08-25T03:03:11.803Z [[32MINFO[39M]: [32mproducto eliminado con exito[39m
-2023-08-25T03:07:21.678Z [[32MINFO[39M]: [32mproductos consultados con exito[39m
-2023-08-25T03:07:29.334Z [[32MINFO[39M]: [32mproducto eliminado con exito[39m
-2023-08-25T03:07:31.350Z [[32MINFO[39M]: [32mproducto eliminado con exito[39m
-2023-08-25T03:07:32.341Z [[32MINFO[39M]: [32mproducto eliminado con exito[39m
-2023-08-25T03:09:39.183Z [[32MINFO[39M]: [32mcarrito especifico consultado con exito[39m
-2023-08-25T03:09:58.172Z [[32MINFO[39M]: [32mcarrito especifico consultado con exito[39m
-2023-08-25T03:11:57.211Z [[32MINFO[39M]: [32mcarrito especifico consultado con exito[39m
-2023-08-25T03:14:55.833Z [[32MINFO[39M]: [32mcarrito especifico consultado con exito[39m
-2023-08-25T03:14:56.195Z [[32MINFO[39M]: [32mticket creado con exito[39m
-2023-08-25T03:15:29.447Z [[32MINFO[39M]: [32mcarrito especifico consultado con exito[39m
-2023-08-25T03:15:29.784Z [[32MINFO[39M]: [32mticket creado con exito[39m
-2023-08-25T03:17:08.555Z [[32MINFO[39M]: [32mcarrito especifico consultado con exito[39m
-2023-08-25T03:17:08.912Z [[32MINFO[39M]: [32mticket creado con exito[39m
-2023-08-25T03:39:18.010Z [[32MINFO[39M]: [32musuario actualizado con exito[39m
-2023-08-25T03:39:40.259Z [[32MINFO[39M]: [32musuario actualizado con exito[39m
-2023-08-25T03:41:11.089Z [[32MINFO[39M]: [32mproducto creado con exito[39m
-2023-08-26T00:48:49.824Z [[32MINFO[39M]: [32mCarritos  totales consultados[39m
-2023-08-26T00:48:54.236Z [[32MINFO[39M]: [32mproductos consultados con exito[39m
-2023-08-26T01:46:07.709Z [[32MINFO[39M]: [32mproducto actualizado con exito[39m
-2023-08-26T01:46:18.039Z [[32MINFO[39M]: [32mproducto especifico consultado con exito[39m
-2023-08-26T01:47:44.800Z [[32MINFO[39M]: [32mproductos consultados con exito[39m
-2023-08-26T01:48:03.668Z [[32MINFO[39M]: [32mproducto especifico consultado con exito[39m
-2023-08-26T01:59:42.921Z [[32MINFO[39M]: [32mproducto eliminado con exito[39m
-2023-08-26T02:13:50.030Z [[32MINFO[39M]: [32mCarritos  totales consultados[39m
-2023-08-26T02:13:52.931Z [[32MINFO[39M]: [32mCarritos  totales consultados[39m
+2023-07-19T15:57:38.046Z [[31MERROR[39M]: [31mno es posible buscar el pruducto[39m
+2023-07-19T15:57:38.087Z [[31MERROR[39M]: [31mno es posible buscar el pruducto[39m
+2023-07-19T19:30:48.655Z [[32MINFO[39M]: [32mCarritos  totales consultados[39m
+2023-07-19T19:31:46.852Z [[32MINFO[39M]: [32mCarritos  totales consultados[39m
+2023-07-19T19:33:53.189Z [[32MINFO[39M]: [32mCarritos  totales consultados[39m
+2023-07-19T19:34:23.122Z [[31MERROR[39M]: [31mno es posible consultar el producto especifico[39m
+2023-07-19T19:34:39.248Z [[32MINFO[39M]: [32mCarritos  totales consultados[39m
+2023-07-19T19:34:42.132Z [[32MINFO[39M]: [32mCarritos  totales consultados[39m
+2023-07-19T19:34:43.238Z [[32MINFO[39M]: [32mCarritos  totales consultados[39m
+2023-07-19T19:34:44.324Z [[32MINFO[39M]: [32mCarritos  totales consultados[39m
+2023-07-19T19:34:45.314Z [[32MINFO[39M]: [32mCarritos  totales consultados[39m
+2023-07-19T20:04:09.198Z [[32MINFO[39M]: [32mCarritos  totales consultados[39m
+2023-07-19T20:04:13.502Z [[32MINFO[39M]: [32mcarrito especifico consultado con exito[39m
+2023-07-19T20:15:42.833Z [[32MINFO[39M]: [32mcarrito especifico consultado con exito[39m
+2023-07-19T20:15:47.029Z [[32MINFO[39M]: [32mCarritos  totales consultados[39m
+2023-07-19T20:15:52.104Z [[32MINFO[39M]: [32mproductos consultados con exito[39m
+2023-07-19T20:15:55.987Z [[32MINFO[39M]: [32mproducto especifico consultado con exito[39m
+2023-07-19T23:02:28.634Z [[32MINFO[39M]: [32mproductos consultados con exito[39m
+2023-07-19T23:02:33.119Z [[32MINFO[39M]: [32mproductos consultados con exito[39m
+2023-07-19T23:22:11.961Z [[32MINFO[39M]: [32mproductos consultados con exito[39m
+2023-07-21T23:12:50.569Z [[32MINFO[39M]: [32mproductos consultados con exito[39m
+2023-07-22T01:37:38.252Z [[32MINFO[39M]: [32mproductos consultados con exito[39m
+2023-07-22T02:18:53.039Z [[32MINFO[39M]: [32mproductos consultados con exito[39m
+2023-07-22T02:20:00.855Z [[32MINFO[39M]: [32mproductos consultados con exito[39m
+2023-07-22T02:21:04.144Z [[32MINFO[39M]: [32mproductos consultados con exito[39m
+2023-07-22T02:51:15.086Z [[32MINFO[39M]: [32mproductos consultados con exito[39m
+2023-07-24T22:42:14.278Z [[32MINFO[39M]: [32mcarrito especifico consultado con exito[39m
+2023-07-24T22:42:14.679Z [[32MINFO[39M]: [32mticket creado con exito[39m
+2023-07-24T22:52:43.272Z [[32MINFO[39M]: [32mproductos consultados con exito[39m
+2023-07-24T22:52:49.720Z [[32MINFO[39M]: [32mcarrito especifico consultado con exito[39m
+2023-07-24T22:52:50.094Z [[32MINFO[39M]: [32mticket creado con exito[39m
+2023-07-24T23:06:54.730Z [[32MINFO[39M]: [32mproductos consultados con exito[39m
+2023-07-24T23:06:59.747Z [[32MINFO[39M]: [32mcarrito especifico consultado con exito[39m
+2023-07-24T23:07:00.112Z [[32MINFO[39M]: [32mticket creado con exito[39m
+2023-07-24T23:18:46.953Z [[32MINFO[39M]: [32mproducto especifico consultado con exito[39m
+2023-07-24T23:18:47.044Z [[32MINFO[39M]: [32mcarrito especifico consultado con exito[39m
+2023-07-24T23:18:47.126Z [[31MERROR[39M]: [31mno es posible agregar el producto al carrito[39m
+2023-07-24T23:47:33.566Z [[32MINFO[39M]: [32mproductos consultados con exito[39m
+2023-07-24T23:54:12.245Z [[32MINFO[39M]: [32mproductos consultados con exito[39m
+2023-07-24T23:54:37.758Z [[32MINFO[39M]: [32mproductos consultados con exito[39m
+2023-07-24T23:55:30.924Z [[32MINFO[39M]: [32mproductos consultados con exito[39m
+2023-07-24T23:58:45.040Z [[32MINFO[39M]: [32mcarrito especifico consultado con exito[39m
+2023-07-24T23:58:45.420Z [[32MINFO[39M]: [32mticket creado con exito[39m
+2023-07-25T00:00:07.924Z [[32MINFO[39M]: [32mcarrito especifico consultado con exito[39m
+2023-07-25T00:09:05.521Z [[32MINFO[39M]: [32mcarrito especifico consultado con exito[39m
+2023-07-25T00:11:00.414Z [[32MINFO[39M]: [32mcarrito especifico consultado con exito[39m
+2023-07-25T00:14:26.283Z [[32MINFO[39M]: [32mproductos consultados con exito[39m
+2023-07-25T00:32:11.097Z [[32MINFO[39M]: [32mproductos consultados con exito[39m
+2023-07-25T02:21:02.279Z [[32MINFO[39M]: [32mproductos consultados con exito[39m
+2023-07-25T02:31:53.694Z [[32MINFO[39M]: [32mproductos consultados con exito[39m
+2023-07-25T02:43:13.531Z [[32MINFO[39M]: [32mcarrito especifico consultado con exito[39m
+2023-07-25T02:50:47.301Z [[32MINFO[39M]: [32mproducto eliminado con exito[39m
+2023-07-25T02:53:08.113Z [[32MINFO[39M]: [32mproducto eliminado con exito[39m
+2023-07-25T03:02:19.048Z [[32MINFO[39M]: [32mproducto eliminado con exito[39m
+2023-07-25T03:02:20.007Z [[32MINFO[39M]: [32mproducto eliminado con exito[39m
+2023-07-25T03:03:11.803Z [[32MINFO[39M]: [32mproducto eliminado con exito[39m
+2023-07-25T03:07:21.678Z [[32MINFO[39M]: [32mproductos consultados con exito[39m
+2023-07-25T03:07:29.334Z [[32MINFO[39M]: [32mproducto eliminado con exito[39m
+2023-07-25T03:07:31.350Z [[32MINFO[39M]: [32mproducto eliminado con exito[39m
+2023-07-25T03:07:32.341Z [[32MINFO[39M]: [32mproducto eliminado con exito[39m
+2023-07-25T03:09:39.183Z [[32MINFO[39M]: [32mcarrito especifico consultado con exito[39m
+2023-07-25T03:09:58.172Z [[32MINFO[39M]: [32mcarrito especifico consultado con exito[39m
+2023-07-25T03:11:57.211Z [[32MINFO[39M]: [32mcarrito especifico consultado con exito[39m
+2023-07-25T03:14:55.833Z [[32MINFO[39M]: [32mcarrito especifico consultado con exito[39m
+2023-07-25T03:14:56.195Z [[32MINFO[39M]: [32mticket creado con exito[39m
+2023-07-25T03:15:29.447Z [[32MINFO[39M]: [32mcarrito especifico consultado con exito[39m
+2023-07-25T03:15:29.784Z [[32MINFO[39M]: [32mticket creado con exito[39m
+2023-07-25T03:17:08.555Z [[32MINFO[39M]: [32mcarrito especifico consultado con exito[39m
+2023-07-25T03:17:08.912Z [[32MINFO[39M]: [32mticket creado con exito[39m
+2023-07-25T03:39:18.010Z [[32MINFO[39M]: [32musuario actualizado con exito[39m
+2023-07-25T03:39:40.259Z [[32MINFO[39M]: [32musuario actualizado con exito[39m
+2023-07-25T03:41:11.089Z [[32MINFO[39M]: [32mproducto creado con exito[39m
+2023-07-26T00:48:49.824Z [[32MINFO[39M]: [32mCarritos  totales consultados[39m
+2023-07-26T00:48:54.236Z [[32MINFO[39M]: [32mproductos consultados con exito[39m
+2023-07-26T01:46:07.709Z [[32MINFO[39M]: [32mproducto actualizado con exito[39m
+2023-07-26T01:46:18.039Z [[32MINFO[39M]: [32mproducto especifico consultado con exito[39m
+2023-07-26T01:47:44.800Z [[32MINFO[39M]: [32mproductos consultados con exito[39m
+2023-07-26T01:48:03.668Z [[32MINFO[39M]: [32mproducto especifico consultado con exito[39m
+2023-07-26T01:59:42.921Z [[32MINFO[39M]: [32mproducto eliminado con exito[39m
+2023-07-26T02:13:50.030Z [[32MINFO[39M]: [32mCarritos  totales consultados[39m
+2023-07-26T02:13:52.931Z [[32MINFO[39M]: [32mCarritos  totales consultados[39m
+2023-07-29T02:02:04.256Z [[32MINFO[39M]: [32mproductos consultados con exito[39m
+2023-07-29T02:14:53.750Z [[31MERROR[39M]: [31mno es posible consultar el producto especifico[39m
+2023-07-29T02:40:32.463Z [[32MINFO[39M]: [32mproducto creado con exito[39m
+2023-07-29T02:45:23.210Z [[32MINFO[39M]: [32mproducto creado con exito[39m
+2023-07-29T02:46:11.516Z [[32MINFO[39M]: [32mproducto creado con exito[39m
+2023-07-29T02:46:44.065Z [[32MINFO[39M]: [32mproducto creado con exito[39m
+2023-07-29T02:52:16.945Z [[32MINFO[39M]: [32mproducto creado con exito[39m
+2023-07-29T02:52:51.250Z [[32MINFO[39M]: [32mproducto creado con exito[39m
+2023-07-29T02:55:02.473Z [[32MINFO[39M]: [32mproducto creado con exito[39m
+2023-07-29T02:55:47.040Z [[32MINFO[39M]: [32mproducto creado con exito[39m
+2023-07-29T02:56:20.307Z [[32MINFO[39M]: [32mproducto creado con exito[39m
+2023-07-29T02:56:30.669Z [[32MINFO[39M]: [32mproducto creado con exito[39m
+2023-07-29T02:56:46.352Z [[32MINFO[39M]: [32mproducto creado con exito[39m
+2023-07-29T03:46:25.691Z [[31MERROR[39M]: [31mno es posible consultar los productos[39m
+2023-07-29T16:49:15.440Z [[31MERROR[39M]: [31mno es posible consultar los productos[39m
+2023-07-29T16:49:17.459Z [[31MERROR[39M]: [31mno es posible crear el producto[39m
+2023-07-29T16:49:19.463Z [[31MERROR[39M]: [31mno es posible crear el producto[39m
+2023-07-29T16:50:58.870Z [[31MERROR[39M]: [31mno es posible consultar los productos[39m
+2023-07-29T16:51:33.658Z [[31MERROR[39M]: [31mno es posible consultar los productos[39m
+2023-07-29T16:53:41.751Z [[31MERROR[39M]: [31mno es posible consultar los productos[39m
+2023-07-29T16:53:51.779Z [[31MERROR[39M]: [31mno es posible crear el producto[39m
+2023-07-29T16:54:01.802Z [[31MERROR[39M]: [31mno es posible crear el producto[39m
+2023-07-29T16:55:25.867Z [[31MERROR[39M]: [31mno es posible consultar los productos[39m
+2023-07-29T16:55:35.893Z [[31MERROR[39M]: [31mno es posible crear el producto[39m
+2023-07-29T16:55:45.904Z [[31MERROR[39M]: [31mno es posible crear el producto[39m
+2023-07-29T16:56:38.397Z [[31MERROR[39M]: [31mno es posible consultar los productos[39m
+2023-07-29T16:56:48.433Z [[31MERROR[39M]: [31mno es posible crear el producto[39m
+2023-07-29T16:56:58.456Z [[31MERROR[39M]: [31mno es posible crear el producto[39m
+2023-07-29T17:40:26.719Z [[31MERROR[39M]: [31mno es posible consultar los productos[39m
+2023-07-29T17:40:36.751Z [[31MERROR[39M]: [31mno es posible crear el producto[39m
+2023-07-29T17:40:46.758Z [[31MERROR[39M]: [31mno es posible crear el producto[39m
+2023-07-29T17:45:51.189Z [[31MERROR[39M]: [31mno es posible consultar los productos[39m
+2023-07-29T17:46:01.217Z [[31MERROR[39M]: [31mno es posible crear el producto[39m
+2023-07-29T17:46:11.233Z [[31MERROR[39M]: [31mno es posible crear el producto[39m
+2023-07-29T17:46:36.046Z [[32MINFO[39M]: [32mproductos consultados con exito[39m
+2023-07-29T17:53:34.118Z [[31MERROR[39M]: [31mno es posible consultar los productos[39m
+2023-07-29T17:53:44.140Z [[31MERROR[39M]: [31mno es posible crear el producto[39m
+2023-07-29T17:53:54.147Z [[31MERROR[39M]: [31mno es posible crear el producto[39m
+2023-07-29T18:10:28.467Z [[31MERROR[39M]: [31mno es posible consultar los productos[39m
+2023-07-29T18:11:39.368Z [[31MERROR[39M]: [31mno es posible consultar los productos[39m
+2023-07-29T18:13:10.262Z [[31MERROR[39M]: [31mno es posible consultar los productos[39m
+2023-07-29T18:36:26.345Z [[31MERROR[39M]: [31mno es posible consultar los productos[39m
+2023-07-29T18:36:46.937Z [[31MERROR[39M]: [31mno es posible consultar los productos[39m
+2023-07-29T18:38:36.970Z [[31MERROR[39M]: [31mno es posible consultar los productos[39m
+2023-07-29T18:40:18.451Z [[31MERROR[39M]: [31mno es posible consultar los productos[39m
+2023-07-29T18:41:32.977Z [[31MERROR[39M]: [31mno es posible consultar los productos[39m
+2023-07-29T18:53:30.446Z [[31MERROR[39M]: [31mno es posible consultar los productos[39m
+2023-07-29T19:02:44.637Z [[31MERROR[39M]: [31mno es posible consultar el producto especifico[39m
+2023-07-29T19:04:21.145Z [[32MINFO[39M]: [32mproductos consultados con exito[39m
+2023-07-29T19:06:55.740Z [[31MERROR[39M]: [31mno es posible consultar los productos[39m
+2023-07-29T19:07:52.251Z [[31MERROR[39M]: [31mno es posible consultar los productos[39m
+2023-07-29T19:08:49.832Z [[31MERROR[39M]: [31mno es posible consultar los productos[39m
+2023-07-29T19:10:18.063Z [[31MERROR[39M]: [31mno es posible consultar los productos[39m
+2023-07-29T19:11:08.166Z [[31MERROR[39M]: [31mno es posible consultar los productos[39m
+2023-07-29T19:15:06.123Z [[32MINFO[39M]: [32mproductos consultados con exito[39m
+2023-07-29T19:19:26.789Z [[32MINFO[39M]: [32mproductos consultados con exito[39m
+2023-07-29T19:19:46.063Z [[31MERROR[39M]: [31mno es posible consultar los productos[39m
+2023-07-29T19:20:41.566Z [[31MERROR[39M]: [31mno es posible consultar los productos[39m
+2023-07-29T19:25:12.040Z [[31MERROR[39M]: [31mno es posible consultar los productos[39m
+2023-07-29T19:27:17.280Z [[31MERROR[39M]: [31mno es posible consultar los productos[39m
+2023-07-29T19:29:20.641Z [[31MERROR[39M]: [31mno es posible consultar los productos[39m
+2023-07-31T22:01:19.515Z [[31MERROR[39M]: [31mno es posible crear el producto[39m
+2023-07-31T22:01:21.530Z [[31MERROR[39M]: [31mno es posible consultar los productos[39m
+2023-07-31T22:01:23.526Z [[31MERROR[39M]: [31mno es posible crear el producto[39m
+2023-07-31T22:01:25.535Z [[31MERROR[39M]: [31mno es posible crear el producto[39m
+2023-07-31T22:01:27.553Z [[31MERROR[39M]: [31mno es posible crear el producto[39m
+2023-07-31T22:01:51.758Z [[31MERROR[39M]: [31mno es posible crear el producto[39m
+2023-07-31T22:01:56.781Z [[31MERROR[39M]: [31mno es posible consultar los productos[39m
+2023-07-31T22:01:58.788Z [[31MERROR[39M]: [31mno es posible crear el producto[39m
+2023-07-31T22:02:00.798Z [[31MERROR[39M]: [31mno es posible crear el producto[39m
+2023-07-31T22:02:02.804Z [[31MERROR[39M]: [31mno es posible crear el producto[39m
+2023-07-31T22:06:44.580Z [[31MERROR[39M]: [31mno es posible consultar los productos[39m
+2023-07-31T22:07:04.598Z [[31MERROR[39M]: [31mno es posible consultar los productos[39m
+2023-07-31T22:07:28.333Z [[31MERROR[39M]: [31mno es posible consultar los productos[39m
+2023-07-31T22:08:31.049Z [[31MERROR[39M]: [31mno es posible consultar los productos[39m
+2023-07-31T22:09:46.891Z [[31MERROR[39M]: [31mno es posible consultar los productos[39m
+2023-07-31T22:16:33.556Z [[31MERROR[39M]: [31mno es posible consultar los productos[39m
+2023-07-31T22:21:33.155Z [[31MERROR[39M]: [31mno es posible consultar los productos[39m
+2023-07-31T22:21:48.044Z [[31MERROR[39M]: [31mno es posible consultar los productos[39m
+2023-07-31T22:22:18.670Z [[31MERROR[39M]: [31mno es posible consultar los productos[39m
+2023-07-31T22:24:02.348Z [[31MERROR[39M]: [31mno es posible consultar los productos[39m
+2023-07-31T22:27:54.105Z [[31MERROR[39M]: [31mno es posible consultar los productos[39m
+2023-07-31T22:33:06.216Z [[31MERROR[39M]: [31mno es posible consultar los productos[39m
+2023-07-31T22:33:27.693Z [[31MERROR[39M]: [31mno es posible consultar los productos[39m
+2023-07-31T22:35:05.519Z [[31MERROR[39M]: [31mno es posible consultar los productos[39m
+2023-07-31T22:36:34.168Z [[32MINFO[39M]: [32mproductos consultados con exito[39m
+2023-07-31T22:37:18.446Z [[31MERROR[39M]: [31mno es posible consultar los productos[39m
+2023-07-31T22:39:53.906Z [[31MERROR[39M]: [31mno es posible consultar los productos[39m
+2023-07-31T22:42:20.238Z [[31MERROR[39M]: [31mno es posible consultar los productos[39m
+2023-07-31T22:48:38.892Z [[31MERROR[39M]: [31mno es posible consultar los productos[39m
+2023-07-31T22:51:51.187Z [[31MERROR[39M]: [31mno es posible consultar los productos[39m
+2023-07-31T22:57:55.378Z [[31MERROR[39M]: [31mno es posible consultar los productos[39m
+2023-07-31T22:57:57.380Z [[31MERROR[39M]: [31mno es posible consultar los productos[39m
+2023-07-31T22:58:31.716Z [[31MERROR[39M]: [31mno es posible consultar los productos[39m
+2023-07-31T22:58:41.740Z [[31MERROR[39M]: [31mno es posible consultar los productos[39m
+2023-07-31T23:07:41.647Z [[31MERROR[39M]: [31mno es posible consultar los productos[39m
+2023-07-31T23:07:51.665Z [[31MERROR[39M]: [31mno es posible consultar los productos[39m
+2023-07-31T23:08:11.832Z [[31MERROR[39M]: [31mno es posible consultar los productos[39m
+2023-07-31T23:08:21.843Z [[31MERROR[39M]: [31mno es posible consultar los productos[39m
+2023-07-31T23:11:45.288Z [[31MERROR[39M]: [31mno es posible consultar los productos[39m
+2023-07-31T23:11:55.309Z [[31MERROR[39M]: [31mno es posible consultar los productos[39m
+2023-07-31T23:12:37.734Z [[31MERROR[39M]: [31mno es posible consultar los productos[39m
+2023-07-31T23:12:37.835Z [[31MERROR[39M]: [31mno es posible consultar los productos[39m
+2023-07-31T23:21:03.845Z [[32MINFO[39M]: [32mproducto creado con exito[39m
+2023-07-31T23:21:03.966Z [[32MINFO[39M]: [32mproducto especifico consultado con exito[39m
+2023-07-31T23:21:03.986Z [[31MERROR[39M]: [31mno es posible consultar el producto especifico[39m
+2023-07-31T23:21:57.629Z [[32MINFO[39M]: [32mproducto creado con exito[39m
+2023-07-31T23:21:57.738Z [[32MINFO[39M]: [32mproducto especifico consultado con exito[39m
+2023-07-31T23:23:35.788Z [[32MINFO[39M]: [32mproducto creado con exito[39m
+2023-07-31T23:23:35.903Z [[32MINFO[39M]: [32mproducto especifico consultado con exito[39m
+2023-07-31T23:27:53.214Z [[32MINFO[39M]: [32mproducto creado con exito[39m
+2023-07-31T23:27:53.317Z [[32MINFO[39M]: [32mproducto especifico consultado con exito[39m
+2023-07-31T23:27:53.417Z [[32MINFO[39M]: [32mproducto creado con exito[39m
+2023-07-31T23:27:53.504Z [[32MINFO[39M]: [32mproducto eliminado con exito[39m
+2023-07-31T23:30:11.145Z [[32MINFO[39M]: [32mproducto creado con exito[39m
+2023-07-31T23:30:11.253Z [[32MINFO[39M]: [32mproducto especifico consultado con exito[39m
+2023-07-31T23:30:11.361Z [[32MINFO[39M]: [32mproducto creado con exito[39m
+2023-07-31T23:30:11.451Z [[32MINFO[39M]: [32mproducto eliminado con exito[39m
+2023-07-31T23:30:11.543Z [[32MINFO[39M]: [32mproducto creado con exito[39m
+2023-07-31T23:30:11.639Z [[31M[1MFATAL[22M[39M]: [31m[1mno es posible acceder a la ruta[22m[39m
+2023-07-31T23:30:45.060Z [[32MINFO[39M]: [32mproducto creado con exito[39m
+2023-07-31T23:30:45.164Z [[32MINFO[39M]: [32mproducto especifico consultado con exito[39m
+2023-07-31T23:30:45.272Z [[32MINFO[39M]: [32mproducto creado con exito[39m
+2023-07-31T23:30:45.369Z [[32MINFO[39M]: [32mproducto eliminado con exito[39m
+2023-07-31T23:30:45.464Z [[32MINFO[39M]: [32mproducto creado con exito[39m
+2023-07-31T23:30:45.561Z [[31M[1MFATAL[22M[39M]: [31m[1mno es posible acceder a la ruta[22m[39m
+2023-07-31T23:34:52.411Z [[32MINFO[39M]: [32mproducto creado con exito[39m
+2023-07-31T23:34:52.509Z [[32MINFO[39M]: [32mproducto especifico consultado con exito[39m
+2023-07-31T23:34:52.605Z [[32MINFO[39M]: [32mproducto creado con exito[39m
+2023-07-31T23:34:52.691Z [[32MINFO[39M]: [32mproducto eliminado con exito[39m
+2023-07-31T23:34:52.789Z [[32MINFO[39M]: [32mproducto creado con exito[39m
+2023-07-31T23:34:52.876Z [[31M[1MFATAL[22M[39M]: [31m[1mno es posible acceder a la ruta[22m[39m
+2023-07-31T23:38:46.800Z [[32MINFO[39M]: [32mproducto creado con exito[39m
+2023-07-31T23:38:46.921Z [[32MINFO[39M]: [32mproducto especifico consultado con exito[39m
+2023-07-31T23:38:47.027Z [[32MINFO[39M]: [32mproducto creado con exito[39m
+2023-07-31T23:38:47.117Z [[32MINFO[39M]: [32mproducto eliminado con exito[39m
+2023-07-31T23:38:47.216Z [[32MINFO[39M]: [32mproducto creado con exito[39m
+2023-07-31T23:38:47.305Z [[31M[1MFATAL[22M[39M]: [31m[1mno es posible acceder a la ruta[22m[39m
+2023-07-31T23:39:26.466Z [[32MINFO[39M]: [32mproducto creado con exito[39m
+2023-07-31T23:39:26.579Z [[32MINFO[39M]: [32mproducto especifico consultado con exito[39m
+2023-07-31T23:39:26.681Z [[32MINFO[39M]: [32mproducto creado con exito[39m
+2023-07-31T23:39:26.772Z [[32MINFO[39M]: [32mproducto eliminado con exito[39m
+2023-07-31T23:39:26.867Z [[32MINFO[39M]: [32mproducto creado con exito[39m
+2023-07-31T23:39:26.958Z [[31M[1MFATAL[22M[39M]: [31m[1mno es posible acceder a la ruta[22m[39m
+2023-07-31T23:40:35.767Z [[32MINFO[39M]: [32mproducto creado con exito[39m
+2023-07-31T23:40:35.888Z [[32MINFO[39M]: [32mproducto especifico consultado con exito[39m
+2023-07-31T23:40:35.996Z [[32MINFO[39M]: [32mproducto creado con exito[39m
+2023-07-31T23:40:36.100Z [[32MINFO[39M]: [32mproducto eliminado con exito[39m
+2023-07-31T23:40:36.196Z [[32MINFO[39M]: [32mproducto creado con exito[39m
+2023-07-31T23:40:36.296Z [[31M[1MFATAL[22M[39M]: [31m[1mno es posible acceder a la ruta[22m[39m
+2023-07-31T23:48:47.605Z [[32MINFO[39M]: [32mproducto creado con exito[39m
+2023-07-31T23:48:47.713Z [[32MINFO[39M]: [32mproducto especifico consultado con exito[39m
+2023-07-31T23:48:47.821Z [[32MINFO[39M]: [32mproducto creado con exito[39m
+2023-07-31T23:48:47.927Z [[32MINFO[39M]: [32mproducto eliminado con exito[39m
+2023-07-31T23:48:48.013Z [[32MINFO[39M]: [32mproducto creado con exito[39m
+2023-07-31T23:48:48.121Z [[31M[1MFATAL[22M[39M]: [31m[1mno es posible acceder a la ruta[22m[39m
+2023-07-31T23:50:31.744Z [[32MINFO[39M]: [32mproducto actualizado con exito[39m
+2023-07-31T23:51:16.503Z [[32MINFO[39M]: [32mproducto actualizado con exito[39m
+2023-07-31T23:56:16.604Z [[32MINFO[39M]: [32mproducto creado con exito[39m
+2023-07-31T23:56:16.715Z [[32MINFO[39M]: [32mproducto especifico consultado con exito[39m
+2023-07-31T23:56:16.819Z [[32MINFO[39M]: [32mproducto creado con exito[39m
+2023-07-31T23:56:16.920Z [[32MINFO[39M]: [32mproducto eliminado con exito[39m
+2023-08-01T00:06:41.657Z [[31MERROR[39M]: [31mno es posible consultar los carritos en la base de datos[39m
+2023-08-01T00:14:10.537Z [[32MINFO[39M]: [32mcarrito creado con exito[39m
+2023-08-01T00:14:49.981Z [[32MINFO[39M]: [32mcarrito creado con exito[39m
+2023-08-01T00:16:10.743Z [[32MINFO[39M]: [32mcarrito creado con exito[39m
+2023-08-01T00:17:02.063Z [[32MINFO[39M]: [32mcarrito creado con exito[39m
+2023-08-01T00:17:02.265Z [[32MINFO[39M]: [32mcarrito especifico consultado con exito[39m
+2023-08-01T00:19:32.716Z [[32MINFO[39M]: [32mcarrito creado con exito[39m
+2023-08-01T00:19:32.905Z [[32MINFO[39M]: [32mcarrito especifico consultado con exito[39m
+2023-08-01T00:20:06.001Z [[32MINFO[39M]: [32mcarrito creado con exito[39m
+2023-08-01T00:20:06.198Z [[32MINFO[39M]: [32mcarrito especifico consultado con exito[39m
+2023-08-01T00:23:12.384Z [[32MINFO[39M]: [32mcarrito creado con exito[39m
+2023-08-01T00:23:12.574Z [[32MINFO[39M]: [32mcarrito especifico consultado con exito[39m
+2023-08-01T00:23:45.323Z [[32MINFO[39M]: [32mcarrito creado con exito[39m
+2023-08-01T00:23:45.518Z [[32MINFO[39M]: [32mcarrito especifico consultado con exito[39m
+2023-08-01T00:23:45.617Z [[32MINFO[39M]: [32mcarrito creado con exito[39m
+2023-08-01T00:24:05.333Z [[32MINFO[39M]: [32mcarrito creado con exito[39m
+2023-08-01T00:24:05.547Z [[32MINFO[39M]: [32mcarrito especifico consultado con exito[39m
+2023-08-01T00:24:05.643Z [[32MINFO[39M]: [32mcarrito creado con exito[39m
+2023-08-01T00:24:05.740Z [[32MINFO[39M]: [32mCarrito eliminado con exito[39m
+2023-08-02T01:15:49.243Z [[32MINFO[39M]: [32musuario actualizado con exito[39m
+2023-08-02T01:15:49.705Z [[32MINFO[39M]: [32musuario actualizado con exito[39m
+2023-08-02T01:19:25.599Z [[32MINFO[39M]: [32musuario actualizado con exito[39m

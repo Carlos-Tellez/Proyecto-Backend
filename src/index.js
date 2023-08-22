@@ -28,6 +28,7 @@ import errorHandler from "./middlewars.erros/index.js"
 import usuarios from "./router/routesMongo/usuarios.routes.js";
 import swaggerJSDoc from "swagger-jsdoc";
 import swaggerUiExpress from "swagger-ui-express";
+import UsuarioArchivos from "./router/routesMongo/usuarios_archivos.js";
 
 const app = express();
 
@@ -97,6 +98,7 @@ app.use("/productosM", productosVista)
 app.use("/carritoM", carritoVista)
 app.use("/mocking", VistaMock)
 app.use("/usuarios", usuarios)
+app.use("/UsuarioA", UsuarioArchivos)
 
 app.use(errorHandler)
 
